@@ -16,6 +16,9 @@
     <Filter Include="Common">
       <UniqueIdentifier>{c5a2f06a-1dc6-4e27-bd33-813373a59b46}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{66fb4329-6fcc-44a5-9896-89badebb13c2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Common\Camera.cpp">
@@ -40,6 +43,9 @@
       <Filter>Common</Filter>
     </ClCompile>
     <ClCompile Include="FrameResource.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="ShapesApp.cpp">
       <Filter>File di origine</Filter>
     </ClCompile>
   </ItemGroup>
@@ -74,5 +80,13 @@
     <ClInclude Include="FrameResource.h">
       <Filter>File di intestazione</Filter>
     </ClInclude>
+    <ClInclude Include="ShapesApp.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="color.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
   </ItemGroup>
 </Project>

@@ -27,7 +27,7 @@ struct RenderItem {
 	int NumFramesDirty = gNumFrameResources;
 
 	//Index into GPU constant buffer corresponding to the ObjectCB for this render item.
-	UINT objCBIndex = -1;
+	UINT ObjCBIndex = -1;
 
 	MeshGeometry* Geo = nullptr;
 
@@ -70,12 +70,12 @@ private:
 	void BuildRootSignature();
 	void BuildShadersAndInputLayout();
 	void BuildShapeGeometry();
-	void BuildPSO();
-	void BuildFrameResource();
+	void BuildPSOs();
+	void BuildFrameResources();
 	void BuildRenderItems();
 	void DrawRenderItems(ID3D12GraphicsCommandList* cmdList, const std::vector<RenderItem*>& ritems);
 
-	std::vector<std::unique_ptr<FrameResource>> mFrameResource;
+	std::vector<std::unique_ptr<FrameResource>> mFrameResources;
 	FrameResource* mCurrFrameResource = nullptr;
 	int mCurrFrameResourceIndex = 0;
 
